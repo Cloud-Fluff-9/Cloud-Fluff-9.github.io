@@ -1,5 +1,5 @@
 # ☁️🥞 Cloud Fluff 9 (클라우드 플러프 9)
-https://cloud-fluff-9.github.io/index.html
+https://cloud-fluff-9.github.io/index.html  
 An elegant, tongue-in-cheek web application for a fictional soufflé pancake restaurant situated in a university dormitory kitchen at **POSTECH** (Pohang, South Korea). The twist? The kitchen is run by a **PhD Candidate in Condensed Matter Physics** who applies quantum mechanics to engineer the theoretically infinite fluffiness of pancakes.
 
 Built entirely with pure, blazing-fast, and lightweight **vanilla frontend web technologies**.
