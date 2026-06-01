@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileBtn) {
         mobileBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            mobileBtn.classList.toggle('active');
         });
     }
 
@@ -102,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                if (mobileBtn) mobileBtn.classList.remove('active');
             });
         });
     }

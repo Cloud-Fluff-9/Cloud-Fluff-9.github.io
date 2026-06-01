@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Cloud Fluff9</title>
+    <meta name="description" content="Learn about Cloud Fluff 9, where quantum mechanics and culinary art collide to create the perfect souffle pancake.">
+    <title>About - Cloud Fluff 9</title>
     <link rel="icon" type="image/png" href="assets/icons/favicon.png?v=1">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700;800&display=swap"
@@ -17,7 +18,11 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">Cloud Fluff 9 ☁️</a>
             <nav>
-                <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
@@ -44,7 +49,7 @@
         <section class="section">
             <div class="container" style="max-width: 900px; margin: 0 auto;">
                 <h2 style="text-align: center; margin-bottom: 40px;" data-i18n="our-story">Our Story</h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 50px;">
+                <div class="story-grid">
                     <div>
                         <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;" data-i18n="about-p1">
                             Cloud Fluff 9 emerged from a unique collision of physics research and culinary passion. Our chef, 
@@ -61,8 +66,8 @@
                             methodology meets the joy of feeding people extraordinarily delicious food.
                         </p>
                     </div>
-                    <div style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                        <div style="background: linear-gradient(135deg, #D4A574 0%, #8D6E63 100%); color: white; padding: 30px; border-radius: 4px; text-align: center;">
+                    <div class="story-card">
+                        <div class="precision-card">
                             <p style="font-size: 3rem; margin-bottom: 10px; line-height: 1;">∞</p>
                             <p style="font-size: 1.3rem; font-weight: bold; margin-bottom: 10px;" data-i18n="precision-meets-passion">Precision Meets Passion</p>
                             <p style="opacity: 0.9; font-size: 0.95rem;" data-i18n="precision-subtitle">Every souffle is a work of scientific art, engineered 
@@ -77,7 +82,7 @@
         <section class="section" style="background: white;">
             <div class="container" style="max-width: 900px; margin: 0 auto;">
                 <h2 style="text-align: center; margin-bottom: 50px;" data-i18n="philosophy-title">Our Philosophy</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+                <div class="philosophy-grid">
                     <div style="padding: 30px; border: 2px solid var(--color-border); border-radius: 4px;">
                         <h3 style="margin-bottom: 15px; color: var(--color-accent);" data-i18n="quality-first">Quality First</h3>
                         <p style="color: var(--color-brown);" data-i18n="quality-desc">We use only the finest ingredients, sourced carefully to ensure 

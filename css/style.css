@@ -193,40 +193,116 @@ nav {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Mobile Menu */
+/* Mobile Menu Button - Sleek Animated Hamburger */
 .mobile-menu-btn {
     display: none;
     background: none;
     border: none;
-    font-size: 1.5rem;
     cursor: pointer;
-    color: var(--color-dark-brown);
+    position: relative;
+    width: 24px;
+    height: 18px;
+    padding: 0;
+    z-index: 110;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    position: absolute;
+    height: 2.5px;
+    width: 100%;
+    background: var(--color-dark-brown);
+    border-radius: 4px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-btn span:nth-child(1) {
+    top: 0px;
+}
+
+.mobile-menu-btn span:nth-child(2) {
+    top: 8px;
+}
+
+.mobile-menu-btn span:nth-child(3) {
+    top: 16px;
+}
+
+/* Hamburger morphing into X */
+.mobile-menu-btn.active span:nth-child(1) {
+    top: 8px;
+    transform: rotate(135deg);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+    left: -40px;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-135deg);
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .nav-container {
+        gap: var(--spacing-md);
+    }
+    
+    .logo {
+        font-size: 1.4rem;
+        order: 1;
+    }
+    
+    .lang-toggle {
+        order: 2;
+        padding: 5px 12px;
+        font-size: 0.85rem;
+    }
+    
+    nav {
+        order: 3;
+        display: flex;
+        align-items: center;
     }
 
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: white;
-        padding: var(--spacing-md);
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        padding: var(--spacing-lg) var(--spacing-md);
         text-align: center;
         gap: var(--spacing-md);
+        box-shadow: 0 15px 30px rgba(93, 64, 55, 0.1);
+        border-bottom: 1px solid var(--color-border);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
     }
 
     .nav-links.active {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
     }
 
     .mobile-menu-btn {
@@ -550,17 +626,204 @@ nav {
     color: var(--color-accent);
 }
 
+/* Desktop Layout Utility Classes */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.story-card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.precision-card {
+    background: linear-gradient(135deg, #D4A574 0%, #8D6E63 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 60px;
+}
+
+#quantum-reservation-box {
+    background: linear-gradient(135deg, var(--color-dark-brown) 0%, #8D6E63 100%);
+    color: white;
+    padding: 50px 40px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 2px solid var(--color-accent);
+}
+
+/* ========================================================
+   📱 Mobile Responsiveness Overrides
+======================================================== */
 @media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        padding: 60px 0 40px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+    
+    .hero-image {
+        height: 280px;
+        margin-top: 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto 0;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Intro/About Cards */
+    .intro-grid {
+        gap: 20px;
+    }
+
+    .intro-card {
+        padding: 24px;
+    }
+
+    /* Team Grid */
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .team-member:first-child {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 24px;
+        gap: 20px;
+    }
+
+    .team-member:first-child .team-member-image {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px;
+    }
+
+    .team-member:first-child h3 {
+        font-size: 1.5rem;
+    }
+
+    .team-member:first-child p {
+        font-size: 1.05rem;
+    }
+
+    .team-member-image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .team-member-bio {
+        padding: 0 5px;
+    }
+
+    /* Menu Items */
     .menu-item-container {
         grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 24px;
+        margin-bottom: 24px;
     }
 
     .menu-item-image {
         height: 250px;
     }
+
+    .menu-item-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* Grids & Cards */
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .story-card {
+        padding: 24px;
+    }
+
+    .precision-card {
+        padding: 20px;
+    }
+
+    .philosophy-grid {
+        gap: 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    #quantum-reservation-box {
+        padding: 35px 20px;
+    }
 }
 
-/* Footer */
+/* Extra Small Screens (Phones under 480px) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.25rem;
+    }
+    
+    .lang-toggle {
+        padding: 4px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Footer styling */
 footer {
     background-color: var(--color-dark-brown);
     color: var(--color-cream);
