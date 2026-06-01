@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cloud Fluff9</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png?v=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Cloud Fluff 9 ☁️</a>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="lang-toggle" id="langToggle">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-cream) 100%); padding: 60px 0;">
+            <div class="container" style="text-align: center;">
+                <h1 style="margin-bottom: 20px;" data-i18n="about-title">About Cloud Fluff 9</h1>
+                <p style="font-size: 1.2rem; color: var(--color-brown); max-width: 700px; margin: 0 auto;" data-i18n="about-subtitle">
+                    Where science meets culinary artistry in the heart of Dormitory 9
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Story -->
+        <section class="section">
+            <div class="container" style="max-width: 900px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: 40px;" data-i18n="our-story">Our Story</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 50px;">
+                    <div>
+                        <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;" data-i18n="about-p1">
+                            Cloud Fluff 9 emerged from a unique collision of physics research and culinary passion. Our chef, 
+                            a PhD candidate specializing in Condensed Matter Physics, realized that the principles governing 
+                            oxide thin films could be applied to creating the perfect souffle.
+                        </p>
+                        <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8; color: var(--color-brown);" data-i18n="about-p2">
+                            What started as late-night lab-to-kitchen experiments became a mission: to prove that haute 
+                            cuisine doesn't require expensive ingredients or pretentious attitudes—just precision, passion, 
+                            and a deep understanding of the molecular world.
+                        </p>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-brown);" data-i18n="about-p3">
+                            Today, Cloud Fluff 9 stands as a testament to accessible fine dining, where rigorous scientific 
+                            methodology meets the joy of feeding people extraordinarily delicious food.
+                        </p>
+                    </div>
+                    <div style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                        <div style="background: linear-gradient(135deg, #D4A574 0%, #8D6E63 100%); color: white; padding: 30px; border-radius: 4px; text-align: center;">
+                            <p style="font-size: 3rem; margin-bottom: 10px; line-height: 1;">∞</p>
+                            <p style="font-size: 1.3rem; font-weight: bold; margin-bottom: 10px;" data-i18n="precision-meets-passion">Precision Meets Passion</p>
+                            <p style="opacity: 0.9; font-size: 0.95rem;" data-i18n="precision-subtitle">Every souffle is a work of scientific art, engineered 
+                            to perfection and served with genuine care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Philosophy -->
+        <section class="section" style="background: white;">
+            <div class="container" style="max-width: 900px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: 50px;" data-i18n="philosophy-title">Our Philosophy</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+                    <div style="padding: 30px; border: 2px solid var(--color-border); border-radius: 4px;">
+                        <h3 style="margin-bottom: 15px; color: var(--color-accent);" data-i18n="quality-first">Quality First</h3>
+                        <p style="color: var(--color-brown);" data-i18n="quality-desc">We use only the finest ingredients, sourced carefully to ensure 
+                        every component meets our exacting standards.</p>
+                    </div>
+                    <div style="padding: 30px; border: 2px solid var(--color-border); border-radius: 4px;">
+                        <h3 style="margin-bottom: 15px; color: var(--color-accent);" data-i18n="scientific-precision">Scientific Precision</h3>
+                        <p style="color: var(--color-brown);" data-i18n="scientific-desc">Each recipe is tested and refined using rigorous scientific methods, 
+                        ensuring consistency and perfection.</p>
+                    </div>
+                    <div style="padding: 30px; border: 2px solid var(--color-border); border-radius: 4px;">
+                        <h3 style="margin-bottom: 15px; color: var(--color-accent);" data-i18n="accessibility">Accessibility</h3>
+                        <p style="color: var(--color-brown);" data-i18n="accessibility-desc">Fine dining doesn't have to be exclusive. We believe everyone 
+                        deserves to experience culinary excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section" style="background: linear-gradient(135deg, #D4A574 0%, #8D6E63 100%); color: white;">
+            <div class="container" style="text-align: center;">
+                <h2 style="color: white; margin-bottom: 30px;" data-i18n="join-us">Join Us at Cloud Fluff 9</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 40px;" data-i18n="join-subtitle">
+                    Experience the convergence of science and cuisine. Reserve your table today.
+                </p>
+                <a href="contact.html" class="btn" style="background-color: white; color: #8D6E63;">Make a Reservation</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="global-footer">
+        <p>&copy; 2026 Cloud Fluff 9. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="about.html">About</a> | <a href="menu.html">Menu</a></p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

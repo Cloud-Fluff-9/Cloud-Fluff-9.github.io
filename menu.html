@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Cloud Fluff9</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png?v=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Cloud Fluff 9 ☁️</a>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="lang-toggle" id="langToggle">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Menu Hero -->
+        <section class="section" style="background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-cream) 100%); padding: 60px 0;">
+            <div class="container" style="text-align: center;">
+                <h1 style="margin-bottom: 20px;" data-i18n="menu-title">The Menu</h1>
+                <p style="font-size: 1.2rem; color: var(--color-brown); max-width: 600px; margin: 0 auto;" data-i18n="menu-intro">
+                    A carefully curated selection of souffles, each a masterpiece of scientific precision and culinary artistry.
+                </p>
+            </div>
+        </section>
+
+        <!-- Menu Items -->
+        <section class="menu-section section">
+            <div class="container">
+                <!-- Standard Model -->
+                <div class="menu-item-container">
+                    <img src="imgs/20260116_175040.jpg" alt="The Standard Model Souffle" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-1-title">Epitaxial Grown Egg Souffle Pancake</h3>
+                        <p data-i18n="menu-item-1-desc">계란 흰자 거품과 설탕 입자의 완벽한 대칭적 구성으로 조화로운 맛의 기본입자 작용을 선보이는 과학적인 에그 수플레 팬케이크.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-1-critique">
+                            "맛의 힉스 메커니즘을 입증하다!" - 입자물리학 저널
+                        </p>
+                        <p class="menu-item-price">₩ 15,000</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- Heisenberg Uncertainty -->
+                <div class="menu-item-container">
+                    <img src="imgs/20250527_182216.jpg" alt="The Heisenberg Uncertainty Principle" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-2-title">Uncertainty Principle Pork Belly, Kimchi & Garlic</h3>
+                        <p data-i18n="menu-item-2-desc">고온 마찰 불판에서 조리되는 삼겹살 지질의 위치와 마늘 화합물의 운동량을 동시에 측정할 수 없는 혼돈의 다상계(multi-phase system) 구이 요리.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-2-critique">
+                            "삼겹살이 사라지는 속도를 전혀 측정할 수 없다!" - 양자요리학자
+                        </p>
+                        <p class="menu-item-price">₩ 17,000</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- Schrödinger's Dream -->
+                <div class="menu-item-container">
+                    <img src="imgs/20250624_191702.jpg" alt="Schrödinger's Dream Stack" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-3-title">Schrödinger's Wavefunction Cabbage Tuna Rice Bowl</h3>
+                        <p data-i18n="menu-item-3-desc">신선하게 썬 양배추와 참치캔, 그리고 반숙 계란 후라이가 결맞음 상태로 공존하는 덮밥. 첫 입을 씹기 전까지는 맛의 파동함수가 붕괴되지 않습니다.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-3-critique">
+                            "먹기 전까지는 알 수 없는 양자역학적 신비!" - 양자철학자
+                        </p>
+                        <p class="menu-item-price">₩ 18,000</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- Wave-Particle Duality -->
+                <div class="menu-item-container">
+                    <img src="imgs/20250701_192439.jpg" alt="The Wave-Particle Duality Deluxe" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-4-title">Wave-Particle Duality Egg Fried Rice-Porridge</h3>
+                        <p data-i18n="menu-item-4-desc">고슬고슬한 밥알 입자의 산란성과 수분 통제 실패로 인한 파동성(거의 죽에 가까운 유동성)을 동시에 지닌 기묘한 이중성의 계란볶음밥.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-4-critique">
+                            "유체역학과 양자역학의 기묘한 타협!" - 현대미식가
+                        </p>
+                        <p class="menu-item-price">₩ 16,500</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- Thermal Equilibrium -->
+                <div class="menu-item-container">
+                    <img src="imgs/20250701_195355.jpg" alt="The Thermal Equilibrium Express" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-5-title">Thermal Equilibrium Stir-Fried Dumplings</h3>
+                        <p data-i18n="menu-item-5-desc">고온의 팬에서 볶아진 바삭한 고기만두와 매콤한 고추기름, 아삭한 부추가 열과 질량이 완벽하게 동등하게 결합된 평형 상태의 만두볶음.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-5-critique">
+                            "절대 평형 온도에서 달성된 극도의 맛 엔트로피!" - 열역학 미식가
+                        </p>
+                        <p class="menu-item-price">₩ 15,500</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- Entropy Maximum -->
+                <div class="menu-item-container">
+                    <img src="imgs/20250712_181536.jpg" alt="The Entropy Maximum Indulgence" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-6-title">Entropy Maximum Pancake with Honey & Banana</h3>
+                        <p data-i18n="menu-item-6-desc">소박한 팬케이크 기질 위에 바나나 디스크 슬라이스와 고점도 유기농 꿀 분자들이 완전한 무질서 상태로 랜덤 분산된 고엔트로피 스택.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-6-critique">
+                            "우주 팽창과 엔트로피 법칙의 아름다운 단맛!" - 엔트로피 전도사
+                        </p>
+                        <p class="menu-item-price">₩ 17,500</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- Photoelectric Effect -->
+                <div class="menu-item-container">
+                    <img src="imgs/20250731_202058.jpg" alt="The Photoelectric Effect Premium" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-7-title">Photoelectric Threshold Chuck Eye Roll Steak</h3>
+                        <p data-i18n="menu-item-7-desc">고도의 구조적 활성화 에너지(턱 운동)를 필요로 하는 강력한 소고기 격자 스테이크. 고무창보다 질긴... 턱관절 한계 임계값을 시험하는 척아이롤 구이.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-7-critique">
+                            "임계 자극에서만 비출되는 육즙! 씹기 위해 무한한 일함수가 요구됨." - 광학 미식가
+                        </p>
+                        <p class="menu-item-price">₩ 18,500</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- Superconducting Bliss -->
+                <div class="menu-item-container">
+                    <img src="imgs/20250818_182300.jpg" alt="The Superconducting Bliss" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-8-title">Superconducting Zero-Friction Chapagetti</h3>
+                        <p data-i18n="menu-item-8-desc">고점도 짜장 소스와 윤기 흐르는 면발, 그 위의 계란 후라이가 마찰 저항 제로에 수렴하는 완벽한 유동 상태를 형성하여 저항이 없는 흡입의 짜파게티.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-8-critique">
+                            "새벽 2시에 저항 없이 무한히 흡입되는 초전도 현상!" - 저온물리학자
+                        </p>
+                        <p class="menu-item-price">₩ 19,000</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- Bose-Einstein Condensate -->
+                <div class="menu-item-container">
+                    <img src="imgs/20250819_182434.jpg" alt="The Bose-Einstein Condensate Luxe" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-9-title">Bose-Einstein Condensation Kimchi Fried Rice</h3>
+                        <p data-i18n="menu-item-9-desc">개별 입자(밥알, 김치, 참기름)들이 밤샘 보존 과정을 거치며 하나의 단일한 미각적 결맞음(coherence) 상태로 응축된 완벽한 일체형 김치볶음밥.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-9-critique">
+                            "모든 밥알이 단 하나의 거대한 붉은 맛의 파동으로 춤춘다!" - 양자통계학 전문가
+                        </p>
+                        <p class="menu-item-price">₩ 19,500</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- String Theory Sensation -->
+                <div class="menu-item-container">
+                    <img src="imgs/20251222_175134.jpg" alt="The String Theory Sensation" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-10-title">11-Dimensional String Theory Spicy Stir-Fried Beef</h3>
+                        <p data-i18n="menu-item-10-desc">초고온 고추장 양념 속에서 소고기 슬라이스들이 11차원 초끈처럼 진동하며, 저렴하게 제육볶음의 맛을 정밀하게 모사하는 현대 입자물리학의 걸작 요리.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-10-critique">
+                            "싸구려 척아이롤이 제육볶음의 현을 튕긴다!" - 끈이론 미식가
+                        </p>
+                        <p class="menu-item-price">₩ 20,000</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- Big Bang Creation -->
+                <div class="menu-item-container">
+                    <img src="imgs/20260116_171446.jpg" alt="The Big Bang Creation Special" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-11-title">Big Bang Expansion Cabbage Shrimp Rice Bowl</h3>
+                        <p data-i18n="menu-item-11-desc">달궈진 마늘기름 특이점에서 시작된 팽창 우주 모델. 아삭한 양배추 가스와 고에너지 새우 입자들이 흰 쌀밥 진공 위에 고르게 안착한 양배추 새우 덮밥.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-11-critique">
+                            "한 그릇에 담긴 초기 우주의 대폭발 팽창!" - 우주론 미식가
+                        </p>
+                        <p class="menu-item-price">₩ 25,000</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- High-Temperature Plasma Scramble -->
+                <div class="menu-item-container">
+                    <img src="imgs/20250607_180315.jpg" alt="The High-Temperature Plasma Scramble" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-12-title">High-Temperature Plasma Chive Egg Stir-Fry</h3>
+                        <p data-i18n="menu-item-12-desc">분자들의 불규칙한 브라운 운동과 열역학적 무질서(엔트로피)를 극대화하고 프라이팬 내부의 고온 플라스마 상태를 모사한 부추계란 볶음.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-12-critique">
+                            "이것은 미식인가, 아니면 열역학적 재앙인가?" - 9동 기숙사 사감
+                        </p>
+                        <p class="menu-item-price">₩ 13,500</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+
+                <!-- Quantum Entanglement -->
+                <div class="menu-item-container">
+                    <img src="imgs/20250514_195120.jpg" alt="The Quantum Entanglement" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-13-title">Quantum Entangledkimchi Fried Rice</h3>
+                        <p data-i18n="menu-item-13-desc">붉은 김치 입자와 잘게 썬 햄 블록으로 구성된 고도 상관 이체계(two-body system). 팬 위에서 강력하게 커플링된 상태를 유지하는 기숙사식 김치볶음밥.</p>
+                        <p style="color: var(--color-brown); font-style: italic; margin-bottom: 15px;" data-i18n="menu-item-13-critique">
+                            "벨의 부등식을 위배하는 맛의 얽힘!" - 양자미식가
+                        </p>
+                        <p class="menu-item-price">₩ 16,000</p>
+                        <a href="contact.html" class="btn" data-i18n="book-table">예약하기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section" style="background: linear-gradient(135deg, #D4A574 0%, #8D6E63 100%); color: white;">
+            <div class="container" style="text-align: center;">
+                <h2 style="color: white; margin-bottom: 30px;" data-i18n="questions-title">Have Questions About Our Menu?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 40px;" data-i18n="questions-subtitle">
+                    Contact us to learn more about our dishes, dietary accommodations, or to make a special request.
+                </p>
+                <a href="contact.html" class="btn" style="background-color: white; color: #8D6E63;">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="global-footer">
+        <p>&copy; 2026 Cloud Fluff 9. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="about.html">About</a> | <a href="menu.html">Menu</a></p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

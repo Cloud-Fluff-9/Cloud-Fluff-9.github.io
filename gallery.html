@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Cloud Fluff9</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png?v=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            aspect-ratio: 1;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            filter: brightness(1.1);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            transition: var(--transition);
+        }
+
+        .lightbox-close:hover {
+            transform: scale(1.2);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Cloud Fluff 9 ☁️</a>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="lang-toggle" id="langToggle">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Gallery Hero -->
+        <section class="section" style="background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-cream) 100%); padding: 60px 0 40px;">
+            <div class="container" style="text-align: center;">
+                <h1 style="margin-bottom: 15px;" data-i18n="gallery-title">Our Memories</h1>
+                <p style="font-size: 1.1rem; color: var(--color-brown); max-width: 600px; margin: 0 auto 35px;" data-i18n="gallery-intro">
+                    A collection of moments from Cloud Fluff 9 - from delicious dishes to unforgettable experiences.
+                </p>
+                <!-- Featured Showpiece Frame (Zero Cropping) -->
+                <div style="
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 12px;
+                    background: white;
+                    border-radius: 16px;
+                    box-shadow: 0 20px 45px rgba(141, 110, 99, 0.15);
+                    border: 1px solid rgba(212, 165, 116, 0.2);
+                    display: block;
+                ">
+                    <img src="imgs/1748343895648.jpg" alt="Featured Souffle" style="
+                        width: 100%;
+                        height: auto;
+                        border-radius: 10px;
+                        display: block;
+                        max-height: 520px;
+                        object-fit: contain;
+                    ">
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Images will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">×</button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">❮</button>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">❯</button>
+        </div>
+    </div>
+
+    <footer id="global-footer">
+        <p>&copy; 2026 Cloud Fluff 9. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="about.html">About</a> | <a href="menu.html">Menu</a></p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Gallery Images
+        const galleryImages = [
+            '20250514_195120.jpg',
+            '20250527_180527.jpg',
+            '20250527_180841.jpg',
+            '20250527_182216.jpg',
+            '20250607_174622.jpg',
+            '20250607_175146.jpg',
+            '20250607_180033.jpg',
+            '20250624_190844.jpg',
+            '20250624_191003.jpg',
+            '20250624_191010.jpg',
+            '20250624_191441.jpg',
+            '20250624_191702.jpg',
+            '20250701_192439.jpg',
+            '20250701_195355.jpg',
+            '20250710_171850.jpg',
+            '20250710_172632.jpg',
+            '20250710_174326.jpg',
+            '20250710_180058.jpg',
+            '20250712_174521.jpg',
+            '20250712_174739.jpg',
+            '20250712_174743.jpg',
+            '20250712_174754.jpg',
+            '20250712_181536.jpg',
+            '20250731_183307.jpg',
+            '20250731_184123.jpg',
+            '20250731_184152.jpg',
+            '20250731_184307.jpg',
+            '20250731_184406.jpg',
+            '20250731_184501.jpg',
+            '20250731_184611.jpg',
+            '20250731_184649.jpg',
+            '20250731_185155.jpg',
+            '20250731_185529.jpg',
+            '20250731_185645.jpg',
+            '20250731_190943.jpg',
+            '20250731_192209.jpg',
+            '20250731_202058.jpg',
+            '20250818_181638.jpg',
+            '20250818_182300.jpg',
+            '20250819_182121.jpg',
+            '20250819_182434.jpg',
+            '20250831_174206.jpg',
+            '20251027_174428.jpg',
+            '20251027_175758.jpg',
+            '20251115_181738.jpg',
+            '20251115_190110.jpg',
+            '20251222_175134.jpg',
+            '20251222_181034.jpg',
+            '20260116_165455.jpg',
+            '20260116_171446.jpg',
+            '20260116_173141 (1).jpg',
+            '20260116_173141.jpg',
+            '20260116_174815.jpg',
+            '20260116_175040.jpg',
+            '1748343895648.jpg'
+        ];
+
+        let currentImageIndex = 0;
+
+        // Load gallery
+        function loadGallery() {
+            const galleryGrid = document.getElementById('galleryGrid');
+            galleryGrid.innerHTML = '';
+
+            galleryImages.forEach((img, index) => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                item.innerHTML = `<img src="imgs/${img}" alt="Gallery image ${index + 1}" loading="lazy">`;
+                item.addEventListener('click', () => openLightbox(index));
+                galleryGrid.appendChild(item);
+            });
+        }
+
+        // Lightbox functions
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = `imgs/${galleryImages[index]}`;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+        }
+
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            document.getElementById('lightboxImage').src = `imgs/${galleryImages[currentImageIndex]}`;
+        }
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            document.getElementById('lightboxImage').src = `imgs/${galleryImages[currentImageIndex]}`;
+        }
+
+        // Event listeners
+        document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+        document.getElementById('lightboxPrev').addEventListener('click', showPrevImage);
+        document.getElementById('lightboxNext').addEventListener('click', showNextImage);
+
+        // Close lightbox when clicking outside image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'ArrowLeft') showPrevImage();
+                if (e.key === 'ArrowRight') showNextImage();
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
+
+        // Initialize
+        loadGallery();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Fluff 9 - Condensed Matter Souffle</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png?v=1">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥞</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Cloud Fluff 9 ☁️</a>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="lang-toggle" id="langToggle">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-i18n="hero-title">Cloud Fluff 9</h1>
+                    <p class="hero-subtitle" data-i18n="hero-subtitle">Physics-Based Condensed Matter Souffle</p>
+                    <a href="menu.html" class="btn" data-i18n="hero-cta">View Menu</a>
+                    <a href="contact.html" class="btn" style="margin-left: 15px;" data-i18n="hero-cta2">Make a Reservation</a>
+                </div>
+                <img src="imgs/20260116_175040.jpg" alt="Cloud Fluff 9 Signature Souffle" class="hero-image">
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="intro section">
+            <div class="container">
+                <h2 data-i18n="intro-title">Why Cloud Fluff 9?</h2>
+                <div class="intro-grid">
+                    <div class="intro-card">
+                        <h3 data-i18n="intro-1-title">Physics-Based Fluff</h3>
+                        <p data-i18n="intro-1-desc">Our recipes are calculated to the molecular level for optimal structural integrity and 
+                        maximum fluffiness through precise oxide thin film theories.</p>
+                    </div>
+                    <div class="intro-card">
+                        <h3 data-i18n="intro-2-title">Dorm 9 Exclusive</h3>
+                        <p data-i18n="intro-2-desc">Located in the legendary Kitchen of Dormitory 9, a culinary sanctuary where science 
+                        meets gastronomy in an intimate setting.</p>
+                    </div>
+                    <div class="intro-card">
+                        <h3 data-i18n="intro-3-title">Chef's Expertise</h3>
+                        <p data-i18n="intro-3-desc">Cooked by a PhD candidate specializing in Condensed Matter Physics. When not in the lab, 
+                        perfecting the art of souffle pancakes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team section">
+            <div class="container">
+                <h2 data-i18n="team-title">Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="assets/person/chief.jpg" alt="Chef" class="team-member-image">
+                        <div>
+                            <h3 data-i18n="team-chief">Chef 'Doctor' Lee</h3>
+                            <p data-i18n="team-chief-desc">Head Chef & Founder</p>
+                            <p class="team-member-bio" data-i18n="team-chief-bio">소울의 물리학 박사에서 출발한 색다른 접근. 뜨거운 열정과 차가운 과학이 만나 Cloud Fluff 9의 마법을 만듭니다.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/person/assi1.jpg" alt="Assistant 1" class="team-member-image">
+                        <h3 data-i18n="team-assi1">Assistant 1</h3>
+                        <p data-i18n="team-assi1-desc">Sous Chef</p>
+                        <p class="team-member-bio" data-i18n="team-assi1-bio">위상 솔리톤 제어를 통한 계란 거품 대류 통제 전문가.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/person/assi2.jpg" alt="Assistant 2" class="team-member-image">
+                        <h3 data-i18n="team-assi2">Assistant 2</h3>
+                        <p data-i18n="team-assi2-desc">Kitchen Assistant</p>
+                        <p class="team-member-bio" data-i18n="team-assi2-bio">결맞음 포획 상태를 활용한 분자 수준의 휘핑 정렬 담당.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/person/assi3.jpg" alt="Assistant 3" class="team-member-image">
+                        <h3 data-i18n="team-assi3">Assistant 3</h3>
+                        <p data-i18n="team-assi3-desc">Kitchen Staff</p>
+                        <p class="team-member-bio" data-i18n="team-assi3-bio">강유전체 스위칭 이론을 응용한 반죽 점도 유동성 모니터링 담당.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Preview Section -->
+        <section class="menu-section section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 50px;" data-i18n="menu-section-title">Our Signature Menu</h2>
+                
+                <div class="menu-item-container">
+                    <img src="imgs/20260116_175040.jpg" alt="Standard Model Souffle" class="menu-item-image">
+                    <div class="menu-item-info">
+                        <h3 data-i18n="menu-item-title">The Standard Model Souffle</h3>
+                        <p data-i18n="menu-item-desc">A perfectly symmetric composition of egg whites and sugar, scientifically engineered to achieve 
+                        maximum cloud-like texture. Each pancake is a marvel of thermodynamics.</p>
+                        <p class="menu-item-price">₩ 12,000</p>
+                        <a href="menu.html" class="btn" data-i18n="menu-explore">Explore Full Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section" style="background: linear-gradient(135deg, #D4A574 0%, #8D6E63 100%); color: white; padding: 80px 0;">
+            <div class="container" style="text-align: center;">
+                <h2 style="color: white; margin-bottom: 30px;" data-i18n="experience-title">Experience Cloud Fluff 9</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;" data-i18n="experience-subtitle">
+                    Join us at Dorm 9 Kitchen for an unforgettable culinary journey where science and taste collide.
+                </p>
+                <a href="contact.html" class="btn" style="background-color: white; color: #8D6E63;" data-i18n="book-table">Book Your Table</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="global-footer">
+        <p>&copy; 2026 Cloud Fluff 9. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="about.html">About</a> | <a href="menu.html">Menu</a></p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

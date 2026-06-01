@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cloud Fluff9</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png?v=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Cloud Fluff 9 ☁️</a>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="lang-toggle" id="langToggle">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section" style="background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-cream) 100%); padding: 60px 0;">
+            <div class="container" style="text-align: center;">
+                <h1 style="margin-bottom: 20px;" data-i18n="contact-title">Visit Us</h1>
+                <p style="font-size: 1.2rem; color: var(--color-brown); max-width: 700px; margin: 0 auto;" data-i18n="contact-subtitle">
+                    Located in the heart of Dormitory 9, ready to serve you an unforgettable culinary experience
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="section">
+            <div class="container" style="max-width: 1000px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; margin-bottom: 60px;">
+                    <!-- Left Column - Info -->
+                    <div>
+                        <h2 style="margin-bottom: 30px;" data-i18n="get-in-touch">Get in Touch</h2>
+                        
+                        <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                            <h3 style="margin-bottom: 15px; color: var(--color-accent);" data-i18n="location">Location</h3>
+                            <p style="color: var(--color-brown); line-height: 1.8;" data-i18n="location-info">
+                                Dormitory 9 Kitchen, POSTECH (Pohang University of Science and Technology), Pohang, South Korea
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                            <h3 style="margin-bottom: 15px; color: var(--color-accent);" data-i18n="hours">Hours</h3>
+                            <p style="color: var(--color-brown); line-height: 1.8;">
+                                <strong data-i18n="hours-info">Open when the chef is not in the lab</strong><br>
+                                <span data-i18n="hours-times">Typically: Wednesday - Saturday, 6:00 PM - 11:00 PM</span><br>
+                                <em style="font-size: 0.9rem; color: var(--color-brown);" data-i18n="hours-note">Please call to confirm availability</em>
+                            </p>
+                        </div>
+
+                        <div style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                            <h3 style="margin-bottom: 15px; color: var(--color-accent);" data-i18n="contact-info">Contact Info</h3>
+                            <p style="color: var(--color-brown); margin-bottom: 10px;">
+                                <strong data-i18n="phone">Phone:</strong> +82 10-XXXX-XXXX
+                            </p>
+                            <p style="color: var(--color-brown);">
+                                <strong data-i18n="email">Email:</strong> reservations@cloudfluff9.com
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Map -->
+                    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d388.158427582867!2d129.32148188012252!3d36.015943009360896!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skr!4v1780246424510!5m2!1sen!2skr" width="100%" height="400" style="border:0; border-radius: 4px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Satirical Quantum Reservation Engine -->
+                <div id="quantum-reservation-box" style="background: linear-gradient(135deg, var(--color-dark-brown) 0%, #8D6E63 100%); color: white; padding: 50px 40px; border-radius: 12px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 2px solid var(--color-accent);">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <h2 style="color: var(--color-beige); margin-bottom: 10px;" data-i18n="ready-title">Quantum Reservation Engine 🌌</h2>
+                        <p style="font-size: 1.1rem; opacity: 0.9;" data-i18n="ready-subtitle">
+                            Please calibrate your thermodynamic state vector to book a table.
+                        </p>
+                    </div>
+                    
+                    <form id="reservation-form" onsubmit="event.preventDefault(); calculateReservation();" style="max-width: 600px; margin: 0 auto; display: grid; gap: 20px;">
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--color-beige);" data-i18n="seating-pref">Seating Preference:</label>
+                            <select id="seating" style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid var(--color-accent); background: white; color: #5D4037; font-weight: 500;">
+                                <option value="superposition" data-i18n="opt-superposition">Superposition (Inside & Outside - Collapses when observed)</option>
+                                <option value="inside" data-i18n="opt-inside">Inside State |1⟩ (Highly correlated kitchen air)</option>
+                                <option value="outside" data-i18n="opt-outside">Outside State |0⟩ (Subject to atmospheric entropy)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--color-beige);" data-i18n="academic-phase">Your Academic / Social Phase:</label>
+                            <select id="rank" style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid var(--color-accent); background: white; color: #5D4037; font-weight: 500;">
+                                <option value="phd" data-i18n="opt-phd">PhD Candidate (100% Chef Sympathy, Priority Seat)</option>
+                                <option value="prof" data-i18n="opt-prof">Professor (5x surcharge applied directly to research grant)</option>
+                                <option value="outsider" data-i18n="opt-outsider">Non-Physicist / Civilian (highly suspect, friction > 0)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn" data-i18n="contact-submit" style="background-color: var(--color-accent); color: white; border: none; padding: 15px; font-size: 1.1rem; font-weight: 700; width: 100%; margin-top: 10px; cursor: pointer; text-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                            Contact
+                        </button>
+                    </form>
+
+                </div>
+
+                <script>
+                    function calculateReservation() {
+                        const lang = document.documentElement.lang || 'en';
+                        let msg = "";
+                        if (lang === 'kr') {
+                            msg = "셰프가 실험을 마친 후에 확인하겠습니다.";
+                        } else {
+                            msg = "Chef will check after finishing experiments.";
+                        }
+                        alert(msg);
+                    }
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <footer id="global-footer">
+        <p>&copy; 2026 Cloud Fluff 9. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="about.html">About</a> | <a href="menu.html">Menu</a></p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
